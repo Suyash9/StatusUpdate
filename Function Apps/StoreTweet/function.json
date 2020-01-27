@@ -1,0 +1,27 @@
+﻿{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "Tweets",
+      "connection": "comp3207appstorage_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

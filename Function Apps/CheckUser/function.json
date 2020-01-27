@@ -1,0 +1,30 @@
+﻿{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "Users",
+      "partitionKey": "{username}",
+      "rowKey": "{password}",
+      "take": 50,
+      "connection": "comp3207appstorage_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

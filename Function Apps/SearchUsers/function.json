@@ -1,0 +1,37 @@
+﻿{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "inputUser",
+      "tableName": "Users",
+      "take": 50,
+      "connection": "comp3207appstorage_STORAGE",
+      "direction": "in",
+      "partitionKey": "{search}"
+    },
+    {
+      "type": "table",
+      "name": "inputAllUsers",
+      "tableName": "Users",
+      "take": 50,
+      "connection": "comp3207appstorage_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
