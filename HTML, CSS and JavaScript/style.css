@@ -1,0 +1,520 @@
+*{
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+@font-face{
+  font-family: "Roboto";
+  src: local("Roboto"), url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
+
+.grid {
+  display: grid;
+  border: 1px solid #00b5a1;
+  grid-column: 1 / 3;
+  position: relative;
+}
+
+.feed {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  height: 750px;
+  background-color: white;
+}
+
+.box {
+  background-color: white;
+  color: black;
+  border: 1px solid #00b5a1;
+}
+
+.home{
+  margin-left:20px;
+}
+
+.newtweet textarea{
+  height:100px;
+  width: 96.5%;
+  border: 2px solid #00b5a1;
+  border-radius: 4px;
+  margin-left: 0.5px;
+  font-size: 18px;
+  margin: 10px 10px 10px 10px;
+  word-break: break-all;
+  resize: none;   
+}
+
+.submittweet {
+  background-color: #00b5a1;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin-left: 80.5%;
+  font-size: 16px;
+  height: 30px;
+  width: 80px;
+  border-radius: 20px;
+  cursor: default;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submittweet:hover{
+  opacity: 0.8;
+}
+
+.timeline{
+  margin-top: 10px;
+  border-top: 2px solid #00b5a1;
+  border-bottom: 2px solid #00b5a1;
+  display: flex;
+  overflow: hidden;
+}
+
+.timelineheading{
+  padding-left:20px;
+}
+
+.refresh{
+  background-color: #00b5a1;
+  border: none;
+  color: white;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-right: 52.5px;
+  text-decoration: none;
+  font-size: 16px;
+  height: 30px;
+  width: 90px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.refresh:hover{
+  opacity: 0.8;
+}
+
+.timelinescroll{
+  position: relative;
+	background-color: white;
+	left: 0px;
+  color:black;
+  width: 99.8%;
+  margin-left: 2px;
+  font-weight: normal;
+  border: none;
+  height: 417px;
+  text-align: left;
+  overflow: scroll;
+}
+
+.profile {
+  margin-top: 247px;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  height: 503px;
+  width: 100%;
+}
+
+.bio{
+  width: 100%;;
+  height: 72px;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.handle {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  padding-top: 50px;
+  color: black;
+}
+
+.logout{
+  background-color: #00b5a1;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 16px;
+  height: 25px;
+  width: 80px;
+  border-radius: 20px;
+  cursor: default;
+  text-align: center;
+  cursor: pointer;
+}
+
+.logout:hover{
+  opacity: 0.8;
+}
+
+.follownumbers{
+  margin-top: 15px;
+}
+
+.search{
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  width: 100%;
+  height: 247px;
+  font-size: 20px;
+}
+
+.search input[type=text]{
+  border: none;
+  color: black;
+  background-color: #d3d3d3;
+  font-size: 20px;
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+}
+
+.search input[type=text]:focus{
+  color: black;
+  background-color: white;
+  border: transparent;
+}
+
+.search input[type=text]:hover{
+  opacity: 0.8;
+}
+
+.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* I got help from this link to style the tabs below: http://qnimate.com/tabbed-area-using-html-and-css-only/ */
+.tabs{
+	position: relative;
+  border-top: 2px solid #00b5a1;
+  background-color: white;
+  color: #d3d3d3;
+  width: 100%;
+}
+
+.tabs .tab{
+	float: left;
+  background-color: inherit;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 900;
+  width: 33.3%;
+  text-align: center;
+  line-height: 40px;
+  overflow:hidden;
+  word-wrap: initial;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.tabs .tab:hover {
+  background-color: #e6f8ff;
+  color:#00b5a1;
+}
+
+.tabs .tab .content{
+	position: absolute;
+	background-color: white;
+	left: 0px;
+  color:black;
+	width: 99.9%;
+  font-weight: normal;
+  border: none;
+  height: 377px;
+  text-align: left;
+  overflow: scroll;
+  border-top: 2px solid #00b5a1;
+}
+
+.checkboxtab{
+  display: none;
+}
+
+.checkboxtab:checked ~ label{
+	color: #00b5a1;
+	border: none;
+}
+
+.checkboxtab:checked ~ .content{
+	z-index: 1;
+}
+
+.searchtabs{
+	position: relative;
+	clear: both;
+  border-top: 2px solid #00b5a1;
+  background-color: white;
+  color: #d3d3d3;
+  width: 100%;
+}
+
+.searchtabs .searchtab{
+	float: left;
+  background-color: inherit;
+  padding: 14px;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 900;
+  width: 50%;
+  text-align: center;
+  line-height: 5px;
+  overflow: hidden;
+  border-bottom: 2px solid #00b5a1;
+}
+
+.searchtabs .searchtab:hover {
+  background-color: #e6f8ff;
+  color:#00b5a1;
+}
+
+.searchcontent{
+	position: absolute;
+	left: 0px;
+  color:black;
+	width: 99.94%;
+  font-weight: normal;
+  border: none;
+  height: 178px;
+  line-height: 30px;
+  text-align: left;
+  overflow: scroll;
+  margin-top: 35px;
+}
+
+.searchcheckboxtab{
+  display: none;
+}
+
+.searchcheckboxtab:checked ~ label{
+	color: #00b5a1;
+	border: none;
+}
+
+.searchcheckboxtab:checked ~ .content{
+	z-index: 1;
+}
+
+/* I got help from this link to style the tweet class below: https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/css-for-embedded-tweets */
+.tweet{
+  margin: 15px 10px 15px 10px;
+  width: 96.5%;
+  min-height: 68px;
+  padding: 10px;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  word-break: break-all;
+}
+
+.tweet:hover{
+  background-color: #d3d3d3;
+  filter: brightness(115%);
+}
+
+.avatar{
+  min-width: 60px;
+  min-height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 5px;
+  margin-right: 10px;
+  resize: none;
+}
+
+.time {
+  padding-left: 0.3em;
+  color: #8899a6;
+}
+
+.time::before {
+  content: "\00b7";
+  padding-right: 0.3em;
+}
+
+.status{
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: left;
+  outline: 0 none;
+}
+
+.searchtweet{
+  margin: 20px 10px 15px 10px;
+  width: 96.5%;
+  min-height: 68px;
+  padding: 10px;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  word-break: break-all;
+}
+
+.searchtweet:hover{
+  background-color: #d3d3d3;
+  filter: brightness(115%);
+}
+
+.searchfollow{
+  border: #00b5a1 solid;
+  background-color: #00b5a1;
+  color: white;
+  margin-top: 3px;
+  font-size: 16px;
+  height: 25px;
+  width: 80px;
+  margin-left: 215px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.searchfollow:hover{
+  opacity: 0.8;
+}
+
+.searchtweetsfollow{
+  border: #00b5a1 solid;
+  background-color: #00b5a1;
+  color: white;
+  margin-top: 3px;
+  font-size: 16px;
+  height: 25px;
+  width: 80px;
+  margin-left: 150px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.searchtweetsfollow:hover{
+  opacity: 0.8;
+}
+
+.tweetuser{
+  margin: 10px 10px 15px 10px;
+  width: 96.5%;
+  min-height: 68px;
+  padding: 10px;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  word-break: break-all;
+}
+
+.tweetuser:hover{
+  background-color: #d3d3d3;
+  filter: brightness(115%);
+}
+
+.follow{
+  margin: 10px 10px 10px 25px;
+  height: 33px;
+  width: 90%;
+  display: flex;
+  font-size: 14px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.followhandle{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-left: 8px;
+}
+
+.error{
+  margin: 10px 10px 10px 25px;
+  height: 33px;
+  width: 90%;
+  display: flex;
+  font-size: 20px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.error:hover{
+  background-color: #d3d3d3;
+  filter: brightness(115%);
+}
+
+.errortweet{
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: 60px;
+}
+
+.errorfollowers{
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: 155px;
+}
+
+.errorfollowing{
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: 85px;
+}
+
+.errortimeline{
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: 150px;
+}
+
+.errorsearchbox{
+  margin: 20px 10px 10px 25px;
+  height: 33px;
+  width: 90%;
+  display: flex;
+  font-size: 20px;
+  border-color: #00b5a1;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.errorsearchtweets{
+  margin-left: 62.5px;
+}
+
+.errorsearchusers{
+  margin-left: 75px;
+}

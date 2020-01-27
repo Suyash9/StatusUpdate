@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="grid">
+        <div class="feed box">
+            <h1 class="home">Home</h1>
+            <form id="writetweet" class="newtweet">
+                <textarea id="newtweet" placeholder="What's up?" maxlength="140"></textarea>
+                <input id="submittweet" type="submit" class="submittweet" value="Tweet">
+            </form>
+            <div class="timeline">
+                <br/>
+                <h1 class="timelineheading">Timeline</h1> <input id="refresh" type="submit" class="refresh" value="Refresh"/>
+                <br/>
+            </div>
+            <div id="timeline" class="timelinescroll">
+                
+            </div>
+        </div>
+
+        <div class="profile box">
+            <div class="bio">
+                <div id="bioimg">
+                </div>
+                <span>
+                    <span id="usernamehandle" class="handle"></span>
+                    <input id="logout" type="submit" class="logout" value="Log Out">
+                    <br/>
+                    <div class="follownumbers">
+                        <span id="nofollowers"> </span>
+                        <span id="nofollowing"> </span>
+                    </div>
+                </span>
+            </div>
+            <form class="tabs">
+                <div class="tab">
+                    <input id="tweets" name="checkbox-tabs-group" type="radio" class="checkboxtab" checked/>
+                    <label for="tweets">Tweets</label>
+                    <div id="tweetstab" class="content">
+
+                    </div>
+                </div>
+                    
+                <div class="tab">
+                    <input id="followers" name="checkbox-tabs-group" type="radio" class="checkboxtab"/>
+                    <label for="followers">Followers</label>
+                    <div id="followerstab" class="content">
+                        
+                    </div>
+                </div>
+                    
+                <div class="tab">
+                    <input id="following" name="checkbox-tabs-group" type="radio" class="checkboxtab"/>
+                    <label for="following">Following</label>
+                    <div id="followingtab" class="content">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="search box">
+            <input id="searchbox" type="text" placeholder="Search" autocomplete="off"/>
+            <div class="searchtabs">
+                    <div class="searchtab">
+                        <input id="searchtweets" name="checkbox-tabs-search" type="radio" class="searchcheckboxtab" checked/>
+                        <label for="searchtweets">Tweets</label>
+                    </div>
+                        
+                    <div class="searchtab">
+                        <input id="searchusers" name="checkbox-tabs-search" type="radio" class="searchcheckboxtab"/>
+                        <label for="searchusers">Users</label>
+                    </div>
+                    <div id="searchresults" class="searchcontent">
+                            
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="setUserAndFollow.js"></script>
+    <script type="text/javascript" src="getTweetsUser.js"></script>
+    <script type="text/javascript" src="getTweetsTimeline.js"></script>
+    <script type="text/javascript" src="getFollowers.js"></script>
+    <script type="text/javascript" src="getFollowing.js"></script> 
+    <script type="text/javascript" src="logout.js"></script>
+    <script type="text/javascript" src="storeTweet.js"></script>
+    <script type="text/javascript" src="searchUsersAndTweets.js"></script>
+    <script type="text/javascript" src="followUser.js"></script>
+</body>
+</html>

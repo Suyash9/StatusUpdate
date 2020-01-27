@@ -1,0 +1,72 @@
+*{
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.heading{
+  text-align: center;
+  font-size: 50px;
+  color: #00b5a1;
+}
+
+.shift{
+  margin-left: 33%;
+  margin-top: 50px;
+}
+
+.logintab{
+	position: relative;
+	clear: both;
+  background-color: white;
+  color: #00b5a1;
+  display: inline;
+}
+
+.logintab input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 25px;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+.logintab input[type=text]:hover, input[type=password]:hover{
+  background-color: #d3d3d3;
+  filter: brightness(115%);
+}
+
+.loginbutton {
+  background-color: #00b5a1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 24.8%;
+  border: 1px solid #00b5a1;
+  font-weight:bold;
+}
+
+.signupbutton{
+  color: #00b5a1;
+  background-color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 24.8%;
+  border: 1px solid #00b5a1;
+  font-weight:bold;
+}
+  
+.loginbutton:hover {
+  opacity: 0.8;
+}
+
+.signupbutton:hover{
+  opacity: 0.8;
+}
+
+@font-face{
+  font-family: "Roboto";
+  src: local("Roboto"), url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
